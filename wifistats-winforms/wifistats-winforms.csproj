@@ -3,8 +3,45 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
-    <RootNamespace>wifistats_winforms</RootNamespace>
+	  <PublishSingleFile>true</PublishSingleFile>
+	  <SelfContained>false</SelfContained>
+	  <RuntimeIdentifier>win-x86</RuntimeIdentifier>
+	  <PublishReadyToRun>true</PublishReadyToRun>
+    <RootNamespace>wifistats</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>Network-Signal-256.ico</ApplicationIcon>
+    <StartupObject>wifistats_winforms.Program</StartupObject>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>WifiStats</PackageId>
+    <Version>1.0.1</Version>
+    <Authors>Nora</Authors>
+    <Company>Nora.LGBT</Company>
+    <Product>WifiStats</Product>
+    <Description>Displays basic wifi statistics</Description>
+    <Copyright>Copyright (c) 2021 Nora.LGBT. All Rights Reserved.</Copyright>
+    <PackageProjectUrl>nora.lgbt/projects/</PackageProjectUrl>
+    <PackageIcon>Network-Signal-256-2.png</PackageIcon>
+    <RepositoryUrl>https://github.com/0J3/wifistats</RepositoryUrl>
+    <RepositoryType>Github</RepositoryType>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Nora.lgbt.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
+    <AssemblyName>wifistats</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Prefer32Bit>true</Prefer32Bit>
+    <Optimize>false</Optimize>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <Prefer32Bit>false</Prefer32Bit>
+    <DebugType>embedded</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,6 +57,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\slith\Downloads\Network-Signal-256-2.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="C:\Users\slith\Downloads\Network-Signal-256.ico">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
