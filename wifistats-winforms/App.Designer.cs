@@ -30,6 +30,7 @@ namespace wifistats_winforms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(App));
             this.RunChecks = new System.Windows.Forms.Timer(this.components);
             this.toggleAlwaysOnTop = new System.Windows.Forms.Button();
             this.Close = new System.Windows.Forms.Button();
@@ -45,25 +46,25 @@ namespace wifistats_winforms
             // 
             // toggleAlwaysOnTop
             // 
-            this.toggleAlwaysOnTop.BackColor = System.Drawing.Color.Black;
+            this.toggleAlwaysOnTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(7)))), ((int)(((byte)(54)))));
             this.toggleAlwaysOnTop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.toggleAlwaysOnTop.FlatAppearance.BorderSize = 0;
             this.toggleAlwaysOnTop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.toggleAlwaysOnTop.Location = new System.Drawing.Point(12, 76);
+            this.toggleAlwaysOnTop.Location = new System.Drawing.Point(12, 71);
             this.toggleAlwaysOnTop.Name = "toggleAlwaysOnTop";
             this.toggleAlwaysOnTop.Size = new System.Drawing.Size(147, 32);
             this.toggleAlwaysOnTop.TabIndex = 0;
             this.toggleAlwaysOnTop.Text = "Toggle Overlay Mode";
             this.toggleAlwaysOnTop.UseVisualStyleBackColor = false;
-            this.toggleAlwaysOnTop.Click += new System.EventHandler(this.button1_Click);
+            this.toggleAlwaysOnTop.Click += new System.EventHandler(this.Button1_Click);
             // 
             // Close
             // 
-            this.Close.BackColor = System.Drawing.Color.Black;
+            this.Close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(7)))), ((int)(((byte)(54)))));
             this.Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Close.FlatAppearance.BorderSize = 0;
             this.Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Close.Location = new System.Drawing.Point(180, 76);
+            this.Close.Location = new System.Drawing.Point(180, 71);
             this.Close.Name = "Close";
             this.Close.Size = new System.Drawing.Size(143, 32);
             this.Close.TabIndex = 1;
@@ -93,14 +94,15 @@ namespace wifistats_winforms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.ClientSize = new System.Drawing.Size(335, 120);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(37)))), ((int)(((byte)(84)))));
+            this.ClientSize = new System.Drawing.Size(335, 113);
             this.Controls.Add(this.DNSPing);
             this.Controls.Add(this.Ping);
             this.Controls.Add(this.Close);
             this.Controls.Add(this.toggleAlwaysOnTop);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "App";
             this.Text = "WifiStats by 0J3";

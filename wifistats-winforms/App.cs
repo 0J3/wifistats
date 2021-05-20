@@ -37,7 +37,7 @@ namespace wifistats_winforms
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             isAlwaysOnTop = !isAlwaysOnTop;
             MinimizeBox = !isAlwaysOnTop;
@@ -61,7 +61,7 @@ namespace wifistats_winforms
 
         private void RunChecks_Tick(object sender, EventArgs e)
         {
-            DNSPing.Text = "Cloudflare DNS Ping: "+sendPing("1.1.1.1");
+            DNSPing.Text = "Cloudflare DNS Ping: "+ sendPing("1.1.1.1");
             Ping.Text = "NeverSSL Ping: " + sendPing("neverssl.com");
         }
     }
